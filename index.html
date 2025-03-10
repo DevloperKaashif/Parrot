@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <link rel="icon" type="image/png" href="c:\Users\User\Downloads\Screenshot_40-removebg-preview.png">
+  <title>Parrot</title>
+  <style>
+        #box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script>
+    let box = document.getElementById("box");
+    let positionX = 100;
+    let positionY = 100;
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowRight") {
+            positionX += 10; 
+            box.style.left = positionX + "px";
+            } 
+           else if (event.key === "ArrowDown") {
+            positionY += 10;
+            box.style.top = positionY + "px";
+            }
+            else if (event.key ==="ArrowUp") {
+            positionY -= 10;
+            box.style.top = positionY + "px";
+            }
+            if (event.key === "ArrowLeft") {
+            positionX -= 10; 
+            box.style.left = positionX + "px";
+            }
+
+    });
+</script>
+
+</body>
+</html>
