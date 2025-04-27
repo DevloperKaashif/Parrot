@@ -1,18 +1,35 @@
-<html>
-<head>
-    <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPfqmtaEv3-hx1h19ykELTXhKdoqgSNB_o0yViO_blTvjKoEhG-8G6PLQB8QlNTFAaMMI1cCS0rdGM6jh4R5g9R4mhhD350GzmekdBLvIz4-be689HtI-LJagzkQpapIqiWiiWkOd4HnOWBrbUEmIdpOtC2DER4SwwOHbd06hfovvehA/s220/Screenshot_40-removebg-preview.png">
-    <title>Paarot</title>
-    <body>
-        <div class="container">
-        <input type="password" id="passwordbox">
-        <button onclick="clearPassword()">clear</button> 
-         <script>
-        function clearPassword() {
-            document.getElementById("passwordbox").value = "";
-            }
-            </script>
-       
-        </script>
-    </body>
-</head>
-</html>
+<input type="text" id="stext"> <button onclick="pop()">Submit</button>
+
+<script>function pop(){
+     let info= document.getElementById("stext").value
+
+    if(info==="sos=boss"){
+        localStorage.clear();
+
+        console.log("ls.c");
+
+		document.getElementById("stext").value="";
+		return
+    }
+
+     if (document.getElementById("stext").value ==""){
+
+        alert("Enter a password");
+
+		return
+    }
+     
+    if (localStorage.getItem("info")== info){
+        alert("correct password")
+     } 
+	
+	if (localStorage.getItem("info") == null) {
+        
+		localStorage.setItem("info",info);
+     }
+
+
+    document.getElementById("stext").value="";
+}
+
+</script>
