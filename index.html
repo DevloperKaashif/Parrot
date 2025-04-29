@@ -1,36 +1,13 @@
-<input type="text" id="stext"> <button onclick="pop()">Submit</button>
-
-<script>function pop(){
-     let info= document.getElementById("stext").value
-
-    if(info==="sos=boss"){
-        localStorage.clear();
-
-        console.log("ls.c");
-
-		document.getElementById("stext").value="";
-		return
-    }
-
-     if (document.getElementById("stext").value ==""){
-
-        alert("Enter a password");
-
-		return
-    }
-     
-    if (localStorage.getItem("info")== info){
-        alert("correct password")
-     } 
-	
-	if (localStorage.getItem("info") == null) {
-        
-		localStorage.setItem("info",info);
-     }
-
-console.log(info) 
-	
-    document.getElementById("stext").value="";
-}
-
-</script>
+<html>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
