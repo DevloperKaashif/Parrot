@@ -1,9 +1,8 @@
 <button onclick="pop()">Don't Press This</button>
 <script>
-function pop() {
-    if (localStorage.getItem("pop") !== "1") {
+ if (localStorage.getItem("pop") == "1") {
         window.open('https://devloperkaashif.github.io/Parrot/', '_blank');
-        localStorage.setItem("pop", "1");
     }
+    function pop() { localStorage.setItem("pop", "1");
 }
 </script>
